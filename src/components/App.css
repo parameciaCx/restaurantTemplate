@@ -1,0 +1,57 @@
+.navigator {
+  margin: 0;
+  border: 0;
+  text-align: right;
+  height: 3vh;
+  padding-top: 2vh;
+}
+
+.is-active {
+  color: #cdffee;
+}
+
+.is-active:after {
+  border-bottom: solid 0.2vh #cdffee;
+  display: block;
+  width: 100%;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+a {
+  font-size: 2vh;
+  width: 6%;
+  text-decoration: none;
+  color: antiquewhite;
+  text-align: left;
+  display: inline-block;
+  margin: 1vw 1vh;
+  padding-bottom: .3vh;
+  -webkit-transition: color 500ms ease-in-out;
+  transition: color 500ms ease-in-out;
+  font-family: "Raleway", sans-serif;
+}
+
+a:hover {
+  color: #cdffee;
+}
+
+a:after {
+  display: block;
+  content: '';
+  border-bottom: solid 0.2vh #cdffee;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+a:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/*# sourceMappingURL=App.css.map */

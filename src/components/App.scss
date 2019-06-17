@@ -1,0 +1,48 @@
+$hoverColor: rgb(205, 255, 238);
+
+.navigator {
+	margin: 0;
+	border: 0;
+	text-align: right;
+	height: 3vh;
+	padding-top: 2vh;
+}
+
+.is-active {
+	color: $hoverColor;
+	&:after {
+		border-bottom: solid .2vh $hoverColor;
+		display: block;
+		width: 100%;
+		transform: scale(1, 1);
+	}
+}
+
+a {
+	font-size: 2vh;
+	width: 6%;
+	text-decoration: none;
+	color: antiquewhite;
+	text-align: left;
+	display: inline-block;
+	margin: 1vw 1vh;
+	padding-bottom: .3vh;
+	transition: color 500ms ease-in-out;
+	font-family: "Raleway", sans-serif;
+
+	&:hover {
+		color: $hoverColor;
+	}
+
+	&:after {
+		display: block;
+		content: '';
+		border-bottom: solid .2vh $hoverColor;
+		transform: scaleX(0);
+		transition: transform 500ms ease-in-out;
+		transform-origin: 0% 50%;
+	}
+	&:hover:after {
+		transform: scaleX(1);
+	}
+}
