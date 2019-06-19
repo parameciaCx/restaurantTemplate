@@ -1,14 +1,67 @@
+$reserveColor: rgb(114, 210, 248);
+
 html {
 	font-family: "Raleway", sans-serif;
+	background-color: rgb(39, 39, 39);
 }
 
 .container {
 	padding-left: 200px;
 	padding-right: 200px;
 }
+
+html,
 body {
 	margin: 0;
-	background-color: rgb(39, 39, 39);
-	background-size: cover;
-	background-repeat: no-repeat;
+	padding: 0;
+	border: 0;
+	height: 100%;
+}
+
+#rootBg {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 70%;
+	z-index: -1;
+	transition: background-image .7s ease-in, width 1s ease-in;
+}
+
+#root {
+	min-height: 100%;
+	margin: 0;
+	color: whitesmoke;
+	text-align: right;
+}
+
+.reserveFoot {
+	display: inline-block;
+	color: whitesmoke;
+	width: 10%;
+	text-decoration: none;
+	text-align: right;
+	margin-right: 2vw;
+	transition: color 350ms ease-in-out;
+	&:hover {
+		color: $reserveColor;
+	}
+	&:after {
+		display: block;
+		content: '';
+		border-bottom: solid .2vh whitesmoke;
+		transition: border-bottom 350ms ease-in-out;
+	}
+	&:hover:after {
+		border-bottom: solid .2vh $reserveColor;
+	}
+}
+
+footer {
+	position: absolute;
+	right: .5vw;
+	bottom: .6vh;
+	font-size: 1.9vh;
 }

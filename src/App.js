@@ -28,11 +28,11 @@ class App extends Component {
 					<Route path="/locations" component={Locations} />
 					<Route path="/contact" component={Contact} />
 
-					<NavLink to="/contact" className="contactFoot">
-						CONTACT ME
+					<NavLink to="/reservations" className="reserveFoot">
+						Make Reservation
 					</NavLink>
 				</Router>
-				<footer>hello</footer>
+				<footer>Zangu 2019 © - All Rights Reserved </footer>
 			</div>
 		);
 	}

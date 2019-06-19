@@ -59,10 +59,10 @@ $hoverColor: rgb(205, 255, 238);
 	font-size: 2.1vh;
 	display: inline-block;
 	text-align: left;
-	color: whitesmoke;
 	width: 30%;
+	opacity: 0;
 	background-color: rgb(39, 39, 39);
-
+	animation: show-x .7s .7s forwards;
 	h3 {
 		padding: 10vh 3vw 0 3vw;
 	}
@@ -72,10 +72,29 @@ $hoverColor: rgb(205, 255, 238);
 }
 
 .hotItems {
-	width: 100%;
-	filter: blur(5px);
+	text-align: center;
+	color: rgb(185, 185, 185);
+	margin: 0 auto;
+	max-width: 50%;
+	opacity: 0;
+	animation: show-x .7s .7s forwards;
+	height: 20%;
+	background: rgba(0, 0, 0, .5);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	overflow: hidden;
+	z-index: 100;
 }
+
 .contentContainer {
 	margin-top: 3vh;
 	text-align: right;
+}
+
+@keyframes show-x {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

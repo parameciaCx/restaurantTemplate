@@ -2,10 +2,10 @@ import React from 'react';
 import aboutBg from './about-bg.jpg';
 
 const About = (props) => {
-	document.body.style.backgroundImage = `url("${aboutBg}")`;
-	document.body.style.backgroundSize = 'cover';
-	document.body.style.backgroundRepeat = 'no-repeat';
-	document.body.style.backgroundPosition = '-540px 0px';
+	document.getElementById('rootBg').style.backgroundImage = `url("${aboutBg}")`;
+	document.getElementById('rootBg').style.backgroundSize = 'cover';
+	document.getElementById('rootBg').style.backgroundRepeat = 'no-repeat';
+	document.getElementById('rootBg').style.width = '55%';
 	return <div> About Us </div>;
 };
 

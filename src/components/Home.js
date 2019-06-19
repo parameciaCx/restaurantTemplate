@@ -2,10 +2,10 @@ import React from 'react';
 import homeBg from './home-bg.jpg';
 
 const Home = (props) => {
-	document.body.style.backgroundImage = `url("${homeBg}")`;
-	document.body.style.backgroundSize = 'cover';
-	document.body.style.backgroundRepeat = 'no-repeat';
-	document.body.style.backgroundPosition = '-420px 0px';
+	document.getElementById('rootBg').style.backgroundImage = `url("${homeBg}")`;
+	document.getElementById('rootBg').style.backgroundSize = 'cover';
+	document.getElementById('rootBg').style.backgroundRepeat = 'no-repeat';
+	document.getElementById('rootBg').style.width = '70%';
 	return (
 		<div className="Home">
 			<div className="contentContainer">
@@ -25,6 +25,7 @@ const Home = (props) => {
 					<p>Et et amet at dolore ea et invidunt sed. Aliquyam at justo.</p>
 				</div>
 			</div>
+
 			<div className="hotItems">hahahahah</div>
 		</div>
 	);
