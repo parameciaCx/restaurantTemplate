@@ -8,6 +8,9 @@ import Locations from './components/Locations';
 import Menu from './components/Menu';
 import Contact from './components/Contact';
 import './styles.css';
+import homeBg from './images/home-bg.jpg';
+import aboutBg from './images/about-bg.jpg';
+import menuBg from './images/menu-bg.jpg';
 
 class App extends Component {
 	constructor() {
@@ -17,13 +20,15 @@ class App extends Component {
 	}
 
 	render() {
+		document.body.style.background = `url(${homeBg}) no-repeat -9999px -9999px`;
+		document.head.style.background = `url(${aboutBg}) no-repeat -9999px -9999px`;
 		return (
-			<div>
+			<div style={{ background: `url(${menuBg}) no-repeat -9999px -9999px` }}>
 				<Router>
 					<Navigation />
-					<Route path="/" exact={true} component={Home} />
-					<Route path="/menu" component={Menu} />
-					<Route path="/about" component={About} />
+					<Route path="/" exact={true} render={(props) => <Home {...props} bg={homeBg} />} />
+					<Route path="/menu" render={(props) => <Menu {...props} bg={menuBg} />} />
+					<Route path="/about" render={(props) => <About {...props} bg={aboutBg} />} />
 					<Route path="/reservations" component={Reservations} />
 					<Route path="/locations" component={Locations} />
 					<Route path="/contact" component={Contact} />
@@ -32,7 +37,7 @@ class App extends Component {
 						Make Reservation
 					</NavLink>
 				</Router>
-				<footer>Zangu 2019 © - All Rights Reserved </footer>
+				<footer id="copy">Zangu 2019 © - All Rights Reserved </footer>
 			</div>
 		);
 	}

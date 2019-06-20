@@ -44,6 +44,7 @@ body {
 	text-decoration: none;
 	text-align: right;
 	margin-right: 2vw;
+	background: url("./images/home-bg.jpg") no-repeat -9999px -9999px;
 	transition: color 350ms ease-in-out;
 	&:hover {
 		color: $reserveColor;

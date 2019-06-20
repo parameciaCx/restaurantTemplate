@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './App.css';
-import logo from './logo.png';
+import logo from '../images/logo.png';
 
 class Navigation extends Component {
 	render() {
