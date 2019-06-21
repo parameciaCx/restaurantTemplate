@@ -1,4 +1,5 @@
 $hoverColor: rgb(205, 255, 238);
+$reserveColor: rgb(114, 210, 248);
 
 .header {
 	display: flex;
@@ -88,6 +89,30 @@ $hoverColor: rgb(205, 255, 238);
 .contentContainer {
 	margin-top: 3vh;
 	text-align: right;
+}
+
+.reserveFoot {
+	display: inline-block;
+	color: whitesmoke;
+	width: 10%;
+	opacity: 0;
+	text-decoration: none;
+	text-align: right;
+	margin-right: 2vw;
+	animation: show-x .7s .7s forwards;
+	transition: color 350ms ease-in-out;
+	&:hover {
+		color: $reserveColor;
+	}
+	&:after {
+		display: block;
+		content: '';
+		border-bottom: solid .2vh whitesmoke;
+		transition: border-bottom 350ms ease-in-out;
+	}
+	&:hover:after {
+		border-bottom: solid .2vh $reserveColor;
+	}
 }
 
 @keyframes show-x {

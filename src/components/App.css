@@ -108,6 +108,36 @@
   text-align: right;
 }
 
+.reserveFoot {
+  display: inline-block;
+  color: whitesmoke;
+  width: 10%;
+  opacity: 0;
+  text-decoration: none;
+  text-align: right;
+  margin-right: 2vw;
+  -webkit-animation: show-x .7s .7s forwards;
+          animation: show-x .7s .7s forwards;
+  -webkit-transition: color 350ms ease-in-out;
+  transition: color 350ms ease-in-out;
+}
+
+.reserveFoot:hover {
+  color: #72d2f8;
+}
+
+.reserveFoot:after {
+  display: block;
+  content: '';
+  border-bottom: solid .2vh whitesmoke;
+  -webkit-transition: border-bottom 350ms ease-in-out;
+  transition: border-bottom 350ms ease-in-out;
+}
+
+.reserveFoot:hover:after {
+  border-bottom: solid 0.2vh #72d2f8;
+}
+
 @-webkit-keyframes show-x {
   from {
     opacity: 0;

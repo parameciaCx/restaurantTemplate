@@ -21,8 +21,8 @@ class Navigation extends Component {
 					<NavLink activeClassName="is-active" to="/reservations">
 						Reservations&nbsp;
 					</NavLink>
-					<NavLink activeClassName="is-active" to="/ingredients">
-						Ingredients&nbsp;
+					<NavLink activeClassName="is-active" to="/locations">
+						Locations&nbsp;
 					</NavLink>
 					<NavLink activeClassName="is-active" to="/contact">
 						Contact Us&nbsp;

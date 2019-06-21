@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Home = (props) => {
 	document.getElementById('rootBg').style.backgroundImage = `url("${props.bg}")`;
@@ -24,6 +25,9 @@ const Home = (props) => {
 					<p>Et et amet at dolore ea et invidunt sed. Aliquyam at justo.</p>
 				</div>
 			</div>
+			<NavLink to="/reservations" className="reserveFoot">
+				Make Reservation
+			</NavLink>
 
 			<div className="hotItems">hahahahah</div>
 		</div>
