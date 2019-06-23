@@ -88,10 +88,16 @@
 }
 
 .hotItems {
-  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  text-align: left;
+  font-size: 1.7vh;
   color: #b9b9b9;
   margin: 0 auto;
   max-width: 50%;
+  height: 20vh;
   opacity: 0;
   -webkit-animation: show-x .7s .7s forwards;
           animation: show-x .7s .7s forwards;
@@ -99,8 +105,40 @@
   background: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  z-index: 100;
+  overflow: visible;
+}
+
+.hotItems img {
+  position: relative;
+  top: -30px;
+  width: 100px;
+}
+
+.hotItems .item1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  margin-left: 2vw;
+}
+
+.hotItems .item1 div {
+  display: float;
+  padding-left: 0.7vw;
+}
+
+.hotItems .item2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  margin-left: 1vw;
+  margin-right: 2vw;
+}
+
+.hotItems .item2 div {
+  display: float;
+  padding-left: 0.7vw;
 }
 
 .contentContainer {

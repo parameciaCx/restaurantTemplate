@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import pizzaPic from '../images/menu/pizza.jpg';
+import makiPic from '../images/menu/maki.jpg';
 
 const Home = (props) => {
 	document.getElementById('rootBg').style.backgroundImage = `url("${props.bg}")`;
@@ -29,7 +31,32 @@ const Home = (props) => {
 				Make Reservation
 			</NavLink>
 
-			<div className="hotItems">hahahahah</div>
+			<div className="hotItems">
+				<div className="item1">
+					<img src={pizzaPic} alt="pizza" />
+					<div>
+						<h3>Zangu Pizza</h3>
+						<p>
+							Signature zangu gourmet pizza made with our secret recipe, 3 michelin star approved. magna
+							dolor sed est ipsum nonumy. Amet et amet sed amet et vero lorem invidunt.
+						</p>
+					</div>
+				</div>
+				<div className="item2">
+					<img src={makiPic} alt="pizza" />
+					<div>
+						<h3>Special maki</h3>
+						<p>
+							Signature maki made with our secret recipe, 3 michelin star approved. magna dolor sed est
+							ipsum nonumy. Amet et amet sed amet et vero lorem invidunt.
+						</p>
+					</div>
+				</div>
+				<div />
+				<NavLink to="/menu" className="menuFoot">
+					More items
+				</NavLink>
+			</div>
 		</div>
 	);
 };

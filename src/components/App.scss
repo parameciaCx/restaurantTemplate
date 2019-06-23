@@ -73,17 +73,46 @@ $reserveColor: rgb(114, 210, 248);
 }
 
 .hotItems {
-	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: left;
+	font-size: 1.7vh;
 	color: rgb(185, 185, 185);
 	margin: 0 auto;
 	max-width: 50%;
+	height: 20vh;
 	opacity: 0;
 	animation: show-x .7s .7s forwards;
 	height: 20%;
 	background: rgba(0, 0, 0, .5);
 	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-	overflow: hidden;
-	z-index: 100;
+	overflow: visible;
+
+	img {
+		position: relative;
+		top: -30px;
+		width: 100px;
+	}
+
+	.item1 {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		margin-left: 2vw;
+	}
+	.item1 div {
+		display: float;
+		padding-left: 0.7vw;
+	}
+	.item2 {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		margin-left: 1vw;
+		margin-right: 2vw;
+	}
+	.item2 div {
+		display: float;
+		padding-left: 0.7vw;
+	}
 }
 
 .contentContainer {
